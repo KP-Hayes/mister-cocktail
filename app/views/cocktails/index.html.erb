@@ -1,0 +1,29 @@
+
+  <div class="banner">
+    <div class="container w-100 h-100 d-flex justify-content-center align-items-center">
+      <div>
+        <h1 class="banner-logo">ThunderCUP</h1>
+          <div class="nadia">
+            <p class="banner-p">for cocktail connoisseurs</p>
+            <button class="btn btn-info"> <%= link_to "Create a NEW COCKTAIL", new_cocktail_path %>
+            </button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="cocktail-card col-sm-3" style="background-image: url(https://images.unsplash.com/photo-1586338211598-e2d64cf97e28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
+       <%= link_to cocktail_path(cocktail.id), style:"color: white" do %>
+        <%= cocktail.name %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
